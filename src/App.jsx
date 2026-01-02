@@ -39,9 +39,9 @@ function App() {
   };
 
   const wizardSteps = [
-    'Add tagline (suggestion: Connect Create Shine)',
+    'Add tagline (suggestion: connect create shine)',
     'Add bio (share your creative journey)',
-    'Add interests (e.g., Art, Writing, Music)',
+    'Add interests (e.g., art, writing, music)',
     'Add work (link to IMDb or portfolio)',
     'Add media (upload images or embed videos)'
   ];
@@ -67,7 +67,7 @@ function App() {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#001F3F', color: 'white', fontFamily: 'sans-serif', padding: '0 1rem' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#001F3F', color: 'white', fontFamily: 'Poppins, sans-serif', padding: '0 1rem' }}>
       {/* Header */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, backgroundColor: '#001F3F', borderBottom: '1px solid rgba(255,215,0,0.3)', padding: '1rem', zIndex: 10 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -80,8 +80,8 @@ function App() {
               <text x="5" y="35" fill="white" fontSize="8" fontWeight="bold">CreSpot</text>
             </svg>
             <div>
-              <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', margin: 0 }}>CreSpot</h1>
-              <p style={{ fontSize: '0.75rem', color: '#FFD700', margin: 0 }}>Connect Create Shine</p>
+              <h1 style={{ fontSize: '1.5rem', fontWeight: '700', margin: 0 }}>CreSpot</h1>
+              <p style={{ fontSize: '0.75rem', color: '#FFD700', margin: 0, letterSpacing: '0.05em' }}>connect create shine</p>
             </div>
           </div>
           <button onClick={() => setShowAdmin(!showAdmin)} style={{ background: 'none', border: 'none', color: '#FFD700', cursor: 'pointer' }}>
@@ -94,7 +94,7 @@ function App() {
       <div style={{ paddingTop: '80px', maxWidth: '900px', margin: '0 auto' }}>
         {showAdmin ? (
           <div>
-            <h3 style={{ color: '#FFD700', textAlign: 'center', marginBottom: '1rem' }}>Admin Moderation Panel</h3>
+            <h3 style={{ color: '#FFD700', textAlign: 'center', marginBottom: '1rem', fontWeight: '600' }}>Admin Moderation Panel</h3>
             <table style={{ width: '100%', borderCollapse: 'collapse', color: 'white' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid rgba(255,215,0,0.3)' }}>
@@ -123,7 +123,7 @@ function App() {
         ) : step < 3 ? (
           // Onboarding
           <div style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(255,215,0,0.3)' }}>
-            <h2 style={{ color: '#FFD700', textAlign: 'center', marginBottom: '2rem' }}>
+            <h2 style={{ color: '#FFD700', textAlign: 'center', marginBottom: '2rem', fontWeight: '700' }}>
               {step === 1 ? 'Join CreSpot' : 'Claim Your Spot'}
             </h2>
 
@@ -145,7 +145,7 @@ function App() {
                   onChange={handleChange}
                   style={{ width: '100%', padding: '1rem', marginBottom: '1rem', backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,215,0,0.3)', borderRadius: '0.5rem', color: 'white' }}
                 />
-                <button onClick={handleNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem', borderRadius: '0.5rem', fontWeight: 'bold', border: 'none' }}>
+                <button onClick={handleNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem', borderRadius: '0.5rem', fontWeight: '600', border: 'none' }}>
                   Next
                 </button>
               </>
@@ -163,7 +163,7 @@ function App() {
                     style={{ flex: 1, padding: '1rem', backgroundColor: 'transparent', color: 'white', border: 'none', outline: 'none' }}
                   />
                 </div>
-                <button onClick={handleNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem', borderRadius: '0.5rem', fontWeight: 'bold', border: 'none' }}>
+                <button onClick={handleNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem', borderRadius: '0.5rem', fontWeight: '600', border: 'none' }}>
                   Claim & Create Profile
                 </button>
               </>
@@ -175,9 +175,9 @@ function App() {
             {showWizard && (
               <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
                 <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '1rem', padding: '2rem', maxWidth: '400px', width: '90%', textAlign: 'center' }}>
-                  <h3 style={{ color: '#FFD700', fontSize: '1.5rem' }}>AI Profile Wizard</h3>
-                  <p style={{ margin: '1rem 0', color: '#ccc' }}>Step {wizardStep + 1}: {wizardSteps[wizardStep]}</p>
-                  <button onClick={handleWizardNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '0.8rem 2rem', borderRadius: '0.5rem', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>
+                  <h3 style={{ color: '#FFD700', fontSize: '1.5rem', fontWeight: '700' }}>AI Profile Wizard</h3>
+                  <p style={{ margin: '1rem 0', color: '#ccc', fontWeight: '400' }}>Step {wizardStep + 1}: {wizardSteps[wizardStep]}</p>
+                  <button onClick={handleWizardNext} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '0.8rem 2rem', borderRadius: '0.5rem', border: 'none', fontWeight: '600', cursor: 'pointer' }}>
                     Next Step
                   </button>
                 </div>
@@ -188,28 +188,28 @@ function App() {
               <div style={{ width: '120px', height: '120px', margin: '0 auto 1rem', borderRadius: '50%', overflow: 'hidden', border: '4px solid #FFD700' }}>
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <h1 style={{ fontSize: '2.25rem' }}>{formData.name || 'Creative User'}</h1>
-              <p style={{ fontSize: '1.5rem', color: '#FFD700' }}>{profileData.tagline}</p>
-              <p style={{ color: '#aaa' }}>crespot.in/{formData.url || 'yourname'}</p>
+              <h1 style={{ fontSize: '2.25rem', fontWeight: '700' }}>{formData.name || 'Creative User'}</h1>
+              <p style={{ fontSize: '1.25rem', color: '#FFD700', fontWeight: '600', letterSpacing: '0.05em' }}>{profileData.tagline}</p>
+              <p style={{ color: '#aaa', fontWeight: '400' }}>crespot.in/{formData.url || 'yourname'}</p>
             </div>
 
             <div style={{ marginBottom: '2rem' }}>
               <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '9999px', height: '12px', overflow: 'hidden' }}>
                 <div style={{ backgroundColor: '#FFD700', height: '100%', width: profileData.completion + '%', transition: 'width 0.5s' }} />
               </div>
-              <p style={{ textAlign: 'center', marginTop: '0.5rem', color: '#aaa' }}>Profile {profileData.completion}% Complete</p>
+              <p style={{ textAlign: 'center', marginTop: '0.5rem', color: '#aaa', fontWeight: '400' }}>Profile {profileData.completion}% Complete</p>
             </div>
 
             <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center' }}>Bio</h3>
-              <p style={{ textAlign: 'center', color: '#ccc' }}>{profileData.bio}</p>
+              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center', fontWeight: '600' }}>Bio</h3>
+              <p style={{ textAlign: 'center', color: '#ccc', fontWeight: '400' }}>{profileData.bio}</p>
             </div>
 
             <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center' }}>Interests</h3>
+              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center', fontWeight: '600' }}>Interests</h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.75rem' }}>
                 {profileData.interests.map((item, i) => (
-                  <span key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '9999px', border: '1px solid rgba(255,215,0,0.3)', color: '#ccc' }}>
+                  <span key={i} style={{ padding: '0.5rem 1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '9999px', border: '1px solid rgba(255,215,0,0.3)', color: '#ccc', fontWeight: '400' }}>
                     {item}
                   </span>
                 ))}
@@ -217,12 +217,12 @@ function App() {
             </div>
 
             <div style={{ marginBottom: '2rem' }}>
-              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center' }}>Media Gallery</h3>
+              <h3 style={{ color: '#FFD700', fontSize: '1.5rem', textAlign: 'center', fontWeight: '600' }}>Media Gallery</h3>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                <button onClick={() => setActiveTab('images')} style={{ backgroundColor: activeTab === 'images' ? '#FFD700' : 'transparent', color: activeTab === 'images' ? '#001F3F' : 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: '1px solid rgba(255,215,0,0.3)' }}>
+                <button onClick={() => setActiveTab('images')} style={{ backgroundColor: activeTab === 'images' ? '#FFD700' : 'transparent', color: activeTab === 'images' ? '#001F3F' : 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: '1px solid rgba(255,215,0,0.3)', fontWeight: '600' }}>
                   Images
                 </button>
-                <button onClick={() => setActiveTab('videos')} style={{ backgroundColor: activeTab === 'videos' ? '#FFD700' : 'transparent', color: activeTab === 'videos' ? '#001F3F' : 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: '1px solid rgba(255,215,0,0.3)' }}>
+                <button onClick={() => setActiveTab('videos')} style={{ backgroundColor: activeTab === 'videos' ? '#FFD700' : 'transparent', color: activeTab === 'videos' ? '#001F3F' : 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: '1px solid rgba(255,215,0,0.3)', fontWeight: '600' }}>
                   Videos
                 </button>
               </div>
@@ -237,12 +237,12 @@ function App() {
             </div>
 
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-              <button style={{ backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem 3rem', borderRadius: '9999px', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}>
+              <button style={{ backgroundColor: '#FFD700', color: '#001F3F', padding: '1rem 3rem', borderRadius: '9999px', fontWeight: '600', border: 'none', cursor: 'pointer' }}>
                 Click for Work Collaborations
               </button>
             </div>
 
-            <div style={{ textAlign: 'center', color: '#aaa', marginBottom: '2rem' }}>
+            <div style={{ textAlign: 'center', color: '#aaa', marginBottom: '2rem', fontWeight: '400' }}>
               Managed by: {profileData.pageManager} | Visitors: {profileData.visitorCount}
             </div>
 
@@ -253,13 +253,13 @@ function App() {
             {showShare && (
               <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
                 <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '1rem', padding: '2rem', maxWidth: '400px', width: '90%', textAlign: 'center' }}>
-                  <h3 style={{ color: '#FFD700', marginBottom: '1rem' }}>Share Your CreSpot</h3>
-                  <p style={{ marginBottom: '1.5rem', color: '#ccc' }}>Copy link: crespot.in/{formData.url}</p>
+                  <h3 style={{ color: '#FFD700', marginBottom: '1rem', fontWeight: '700' }}>Share Your CreSpot</h3>
+                  <p style={{ marginBottom: '1.5rem', color: '#ccc', fontWeight: '400' }}>Copy link: crespot.in/{formData.url}</p>
                   <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                    <button style={{ backgroundColor: '#25D366', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: 'none' }}>WhatsApp</button>
-                    <button style={{ backgroundColor: '#1DA1F2', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: 'none' }}>Twitter</button>
+                    <button style={{ backgroundColor: '#25D366', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: 'none', fontWeight: '600' }}>WhatsApp</button>
+                    <button style={{ backgroundColor: '#1DA1F2', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', border: 'none', fontWeight: '600' }}>Twitter</button>
                   </div>
-                  <button onClick={closeShare} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '0.8rem', borderRadius: '0.5rem', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>
+                  <button onClick={closeShare} style={{ width: '100%', backgroundColor: '#FFD700', color: '#001F3F', padding: '0.8rem', borderRadius: '0.5rem', border: 'none', fontWeight: '700', cursor: 'pointer' }}>
                     Close
                   </button>
                 </div>
