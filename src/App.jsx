@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function App() {
-  const [step, setStep] = useState(1); // 1 = email/name, 2 = URL, 3 = profile
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({ email: '', name: '', url: '' });
   const [wizardStep, setWizardStep] = useState(0);
   const [showWizard, setShowWizard] = useState(false);
@@ -68,11 +68,9 @@ function App() {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#001F3F', color: 'white', fontFamily: 'Poppins, sans-serif', padding: '0 1rem' }}>
-      {/* Header */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, backgroundColor: '#001F3F', borderBottom: '1px solid rgba(255,215,0,0.3)', padding: '1rem', zIndex: 10 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            {/* Final Logo */}
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
               <circle cx="20" cy="20" r="20" fill="#001F3F" />
               <path d="M10 20C10 14.477 14.477 10 20 10C25.523 10 30 14.477 30 20" stroke="white" strokeWidth="4" strokeLinecap="round" transform="rotate(30 20 20)" />
@@ -90,7 +88,6 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content */}
       <div style={{ paddingTop: '80px', maxWidth: '900px', margin: '0 auto' }}>
         {showAdmin ? (
           <div>
@@ -121,7 +118,6 @@ function App() {
             </table>
           </div>
         ) : step < 3 ? (
-          // Onboarding
           <div style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(255,215,0,0.3)' }}>
             <h2 style={{ color: '#FFD700', textAlign: 'center', marginBottom: '2rem', fontWeight: '700' }}>
               {step === 1 ? 'Join CreSpot' : 'Claim Your Spot'}
@@ -170,7 +166,6 @@ function App() {
             )}
           </div>
         ) : (
-          // Profile Page
           <div>
             {showWizard && (
               <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 50 }}>
